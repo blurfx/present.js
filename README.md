@@ -16,6 +16,7 @@ jQuery only
 |slideSpeed|integer|400|Determining how long the slide transition effect will run|
 |opacityTransition|boolean|false|Sets whether to use the opacity change animation when slide changing.|
 |bgColorTransition|boolean|false|Sets whether to use the background color change animation when background color of the change slide is different.|
+|transitionSpeed|integer|600|Determining how long the tranparency and color transition effect will run|
 |showPageNumber|boolean|true|Display text that shows current slide index and total slide count.|
 |pageNumberPos|string|right bottom| Set position of *showPageNumber*.<br>Usable Values : left, right, top, bottom, center|
 |showProgress|boolean|false|Display progress bar that shows presentation progress.|
