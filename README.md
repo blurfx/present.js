@@ -15,71 +15,13 @@ jQuery only
   It wraps every slide cotents and align vertically middle and align texts to center.
 
 
-　
 
-
-- animate ```boolean```
-
-  default : ```false```
-  
-  This options for animation of slide transition effect and speed.
-
-  slideSpeed, opacityTransition, bgColorTransition requires this option.
-  
-  　
-  　
-  　
-- slideSpeed ```integer```
-
-  default : ```400```
-  
-  Determining how long the slide transition effect will run
-
-  
-  　
-  　
-  　
-- opacityTransition ```boolean```
-
-  default : ```false```
-  
-  Sets whether to use the opacity change animation when slide changing.
-
-  
-　
-  　
-  　
-- bgColorTransition ```boolean```
-
-  default : ```false```
-  
-  Sets whether to use the background color change animation when background color of the change slide is different.
-  
-
-　
-　
-　
-　
-- showPageNumber ``boolean``
-
-  default : ``true``
-  
-  Display text that shows current slide index and total slide count.
-  
-  
-  　
-  　
-  　
-- pageNumberPos ``string``
-
-  default : ``right bottom``
-  
-  
-　
-　
-　
-- showProgress ``boolean``
-
-  default : ``false``
-  
-  Display progress bar that shows presentation progress.
+| Option | Data type | Default | Comment |
+|--------|-----------|---------|---------|
+|animate|boolean|false| This options for animation of slide transition effect and speed.<br>slideSpeed, opacityTransition, bgColorTransition requires this option.|
+|slideSpeed|integer|400|Determining how long the slide transition effect will run|
+|opacityTransition|boolean|false|Sets whether to use the opacity change animation when slide changing.|
+|bgColorTransition|boolean|false|Sets whether to use the background color change animation when background color of the change slide is different.|
+|showPageNumber|boolean|true|Display text that shows current slide index and total slide count.|
+|pageNumberPos|string|right bottom| Set position of *showPageNumber*.<br>Usable Values : left, right, top, bottom, center|
+|showProgress|boolean|false|Display progress bar that shows presentation progress.|
