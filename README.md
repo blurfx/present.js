@@ -8,16 +8,10 @@ jQuery only
 
 
 ##Options
-- alignMiddle ```boolean```
-
-  default : ```true```
-  
-  It wraps every slide cotents and align vertically middle and align texts to center.
-
-
 
 | Option | Data type | Default | Comment |
 |--------|-----------|---------|---------|
+|alignMiddle|boolean|true|It wraps every slide cotents and align vertically middle and align texts to center.|
 |animate|boolean|false| This options for animation of slide transition effect and speed.<br>slideSpeed, opacityTransition, bgColorTransition requires this option.|
 |slideSpeed|integer|400|Determining how long the slide transition effect will run|
 |opacityTransition|boolean|false|Sets whether to use the opacity change animation when slide changing.|
