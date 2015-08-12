@@ -15,6 +15,8 @@ jQuery only
   It wraps every slide cotents and align vertically middle and align texts to center.
 
 
+　
+
 
 - animate ```boolean```
 
