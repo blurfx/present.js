@@ -7,7 +7,11 @@ fufufu.js is lightweight presentation library.
 - No dependency
 - Responsive
 - Support Touch Events
-
+- Support vertical-middle Alignment
+- Animations
+  - Color Transition
+  - Opacity Transition
+  - Slide Animation
 
 ##Installation
 
