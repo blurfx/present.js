@@ -2,6 +2,12 @@
 
 fufufu.js is lightweight presentation library.
 
+##Features
+- Lightweight
+- No dependency
+- Responsive
+- Support Touch Events
+
 
 ##Installation
 
@@ -11,7 +17,6 @@ Download minified js file to your project and link it.
 ```html
 <script type="text/javascript" src="fufufu.min.js"></script>
 ```
-
 
 ##Usage
 
@@ -48,6 +53,11 @@ fufufu({
 |showProgress|boolean|false|Display progress bar that shows presentation progress.|
 
 
+##Browser Support
+
+|                     | Internet Explorer | Chrome | Firefox | Opera | Safari |
+|:-------------------:|:-----------------:|:------:|:-------:|:-----:|:------:|
+|                     |        10+        |   8+   |   3.6+  | 11.5+ |  5.1+  |
 
 ##Demo
 
