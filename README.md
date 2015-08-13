@@ -19,12 +19,12 @@ fufufu();
 ```
 or
 ```javascript
-  fufufu({
-    animate: true,
-    showProgress: true,
-    showPageNumber: true,
-    //more options goes here
-  });
+fufufu({
+  animate: true,
+  showProgress: true,
+  showPageNumber: true,
+  //more options goes here
+});
 ```
 
 
@@ -41,3 +41,9 @@ or
 |showPageNumber|boolean|true|Display text that shows current slide index and total slide count.|
 |pageNumberPos|string|right bottom| Set position of *showPageNumber*.<br>Usable Values : left, right, top, bottom, center|
 |showProgress|boolean|false|Display progress bar that shows presentation progress.|
+
+
+
+##Demo
+
+http://mystika.me/fufufu.js/
