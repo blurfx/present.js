@@ -6,8 +6,36 @@ fufufu.js is lightweight presentation jquery library.
 jQuery only
 
 
+##Installation
 
-##Options
+###manual
+
+Download minified js file to your project and link it.
+```html
+<script type="text/javascript" src="fufufu.min.js"></script>
+```
+
+
+##Usage
+```javascript
+$(document).ready(function(){
+  $.fufufu();
+});
+```
+or
+```javascript
+$(document).ready(function({
+  $.fufufu({
+    animate: true,
+    showProgress: true,
+    showPageNumber: true,
+    //more options goes here
+  });
+});
+```
+
+
+##Options(Attributes)
 
 | Option | Data type | Default | Comment |
 |--------|-----------|---------|---------|
