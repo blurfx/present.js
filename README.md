@@ -55,9 +55,9 @@ fufufu({
 
 ##Browser Support
 
-|                     | Internet Explorer | Chrome | Firefox | Opera | Safari |
-|:-------------------:|:-----------------:|:------:|:-------:|:-----:|:------:|
-|                     |        10+        |   8+   |   3.6+  | 11.5+ |  5.1+  |
+| Internet Explorer | Chrome | Firefox | Opera | Safari |
+|:-----------------:|:------:|:-------:|:-----:|:------:|
+|        10+        |   8+   |   3.6+  | 11.5+ |  5.1+  |
 
 ##Demo
 
