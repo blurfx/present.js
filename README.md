@@ -1,4 +1,4 @@
-# fufufu.js
+# fufufu.js - ふふふ
 
 fufufu.js is lightweight presentation library.
 
