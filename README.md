@@ -14,6 +14,12 @@ Download minified js file to your project and link it.
 
 
 ##Usage
+
+First, make some div elements that has slide class. div.slide elements will be one of slide page.
+(parent of div.slide elements should be same)
+
+and..
+
 ```javascript
 fufufu();
 ```
