@@ -1,9 +1,6 @@
 # fufufu.js
 
-fufufu.js is lightweight presentation jquery library.
-
-##Dependency
-jQuery only
+fufufu.js is lightweight presentation library.
 
 
 ##Installation
@@ -18,20 +15,16 @@ Download minified js file to your project and link it.
 
 ##Usage
 ```javascript
-$(document).ready(function(){
-  $.fufufu();
-});
+fufufu();
 ```
 or
 ```javascript
-$(document).ready(function({
-  $.fufufu({
+  fufufu({
     animate: true,
     showProgress: true,
     showPageNumber: true,
     //more options goes here
   });
-});
 ```
 
 
