@@ -1,7 +1,17 @@
-# fufufu.js
+# fufufu.js - ふふふ
 
 fufufu.js is lightweight presentation library.
 
+##Features
+- Lightweight
+- No dependency
+- Responsive
+- Support Touch Events
+- Support vertical-middle Alignment
+- Animations
+  - Color Transition
+  - Opacity Transition
+  - Slide Animation
 
 ##Installation
 
@@ -12,8 +22,13 @@ Download minified js file to your project and link it.
 <script type="text/javascript" src="fufufu.min.js"></script>
 ```
 
-
 ##Usage
+
+First, make some div elements that has slide class. div.slide elements will be one of slide page.
+(parent of div.slide elements should be same)
+
+and..
+
 ```javascript
 fufufu();
 ```
@@ -42,6 +57,7 @@ fufufu({
 |showProgress|boolean|false|Display progress bar that shows presentation progress.|
 
 
+
 ##Fragmentation
 
 Set ``data-fragindex="INDEX_VALUE"`` attribute where you want.
@@ -55,6 +71,13 @@ like this
     <span class="fufufu-subtitle" data-fragindex="3">Isn't it?</span>
 </div>
 ```
+
+=======
+##Browser Support
+
+| Internet Explorer | Chrome | Firefox | Opera | Safari |
+|:-----------------:|:------:|:-------:|:-----:|:------:|
+|        10+        |   8+   |   3.6+  | 11.5+ |  5.1+  |
 
 
 ##Demo
