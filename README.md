@@ -42,6 +42,20 @@ fufufu({
 |showProgress|boolean|false|Display progress bar that shows presentation progress.|
 
 
+##Fragmentation
+
+Set ``data-fragindex="INDEX_VALUE"`` attribute where you want.
+
+like this
+```html
+<div class="slide">
+    <span class="fufufu-title">Fragments</span>
+    <span class="fufufu-subtitle" data-fragindex="1">Use <code>data-fragindex</code> attribute for fragments</span>
+    <span class="fufufu-subtitle" data-fragindex="2">How easy!</span>
+    <span class="fufufu-subtitle" data-fragindex="3">Isn't it?</span>
+</div>
+```
+
 
 ##Demo
 

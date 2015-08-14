@@ -1,14 +1,14 @@
 function qs(str){ return document.querySelector(str) }
 function qa(str){ return document.querySelectorAll(str) }
 
-function colorHex(colorval) {
-    var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-    delete(parts[0]);
+function colorHex(val) {
+    var p = val.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+    delete(p[0]);
     for (var i = 1; i <= 3; ++i) {
-        parts[i] = parseInt(parts[i]).toString(16);
-        if (parts[i].length == 1) parts[i] = '0' + parts[i];
+        p[i] = parseInt(p[i]).toString(16);
+        if (p[i].length == 1) p[i] = '0' + p[i];
     }
-    return '#' + parts.join('');
+    return '#' + p.join('');
 }
 
 function prepareColorTransition(){
@@ -137,10 +137,29 @@ function fufufu(options) {
     }
   }
 
-  function changeSlide(nextSlide,lval){
+  function slideChange(nextSlide,lval){
     var i = 0;
     var slides = qa('.slide');
     
+    //check fragments
+    if(nextSlide.getAttribute('data-index') > qs('.slide.current').getAttribute('data-index')){
+      var frag = qs('.slide.current [data-fragindex][data-fragvisible="n"]');
+      if(frag){
+        singleCss(frag,{'opacity':1});
+        frag.setAttribute('data-fragvisible','y');
+        return;
+      }
+    }else {
+      var frag = qa('.slide.current [data-fragindex][data-fragvisible="y"]');
+      if(frag.length){
+        singleCss(frag[frag.length-1],{'opacity':0});
+        frag[frag.length-1].setAttribute('data-fragvisible','n');
+        return;
+      }
+    }
+
+    if(qs('.slide.current'))
+
     if(settings.animate){
       if(settings.bgColorTransition){
         singleCss(qs('.slide.current'), { 'background' : nextSlide.getAttribute('data-background')});
@@ -214,13 +233,19 @@ function fufufu(options) {
         singleCss(qa('.slide')[i],{'background': colorHex(document.defaultView.getComputedStyle(qa('.slide')[i],null).backgroundColor)});
       }
     }
+    var j=0;
+    var frag = qa('[data-fragindex]');
+    for(j=0;j<frag.length;j++){
+      singleCss(frag[j],{'opacity': 0}); 
+      frag[j].setAttribute('data-fragvisible','n');
+    }
 
     if(!i) qa('.slide')[i].classList.add('current');
     
     qa('.slide')[i].setAttribute('data-index',i+1);
     
     if(settings.opacityTransition){
-      var j=0;
+      
       for(;j<qa('.slide:not(.current)').length;j++)
         css(qa('.slide:not(.current)')[j].children,{'opacity':0});
     }
@@ -275,12 +300,12 @@ function fufufu(options) {
     if(event.which == 37){
       //press left
       if(getPrevNext('prev')){
-        changeSlide(getPrevNext('prev'),100);
+        slideChange(getPrevNext('prev'),100);
       }
     }else if(event.which == 39){
       //press right
       if(getPrevNext('next')){
-       changeSlide(getPrevNext('next'),-100);
+       slideChange(getPrevNext('next'),-100);
       }
     }
   });
@@ -307,11 +332,11 @@ function fufufu(options) {
     }
     if(fx + _n < lx){
       if(getPrevNext('prev')){
-        changeSlide(getPrevNext('prev'),100);
+        slideChange(getPrevNext('prev'),100);
       }
     } else if(fx > lx + _n) {
       if(getPrevNext('next')){
-        changeSlide(getPrevNext('next'),-100);
+        slideChange(getPrevNext('next'),-100);
       }
     }
   });
