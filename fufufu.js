@@ -142,15 +142,36 @@ function fufufu(options) {
     var slides = qa('.slide');
     
     //check fragments
+    var frag = [];
+
+
     if(nextSlide.getAttribute('data-index') > qs('.slide.current').getAttribute('data-index')){
-      var frag = qs('.slide.current [data-fragindex][data-fragvisible="n"]');
-      if(frag){
-        singleCss(frag,{'opacity':1});
-        frag.setAttribute('data-fragvisible','y');
+      for(i=0;i<qa('.slide.current [data-fragindex][data-fragvisible="n"]').length;i++) frag[i] = qa('.slide.current [data-fragindex][data-fragvisible="n"]')[i];
+      for(i=0;i<frag.length-1;i++){
+      	if(frag[i].getAttribute('data-fragindex') > frag[i+1].getAttribute('data-fragindex')){
+      		var dummy = frag[i];
+      		frag[i] = frag[i+1];
+      		frag[i+1] = dummy;
+      		i=-1;
+      	}
+      }
+
+      if(frag.length){
+        singleCss(frag[0],{'opacity':1});
+        frag[0].setAttribute('data-fragvisible','y');
         return;
       }
     }else {
-      var frag = qa('.slide.current [data-fragindex][data-fragvisible="y"]');
+      for(i=0;i<qa('.slide.current [data-fragindex][data-fragvisible="y"]').length;i++) frag[i] = qa('.slide.current [data-fragindex][data-fragvisible="y"]')[i];
+      for(i=0;i<frag.length-1;i++){
+      	if(frag[i].getAttribute('data-fragindex') > frag[i+1].getAttribute('data-fragindex')){
+      		var dummy = frag[i];
+      		frag[i] = frag[i+1];
+      		frag[i+1] = dummy;
+      		i=-1;
+      	}
+      }
+
       if(frag.length){
         singleCss(frag[frag.length-1],{'opacity':0});
         frag[frag.length-1].setAttribute('data-fragvisible','n');
@@ -171,7 +192,7 @@ function fufufu(options) {
         css(nextSlide.children,{'opacity': 1});
       }
     }
-    for(;i<slides.length;i++){
+    for(i=0;i<slides.length;i++){
       singleCss(slides[i],{'left':parseInt(slides[i].style.left)+lval+'%'},1);
     }
 
@@ -207,6 +228,8 @@ function fufufu(options) {
       'position': 'relative',
       'top': '50%',
       'transform' : 'translateY(-50%)',
+      '-webkit-transform' : 'translateY(-50%)',
+      '-ms-transform' : 'translateY(-50%)',
       'textAlign': 'center'
     });
 
