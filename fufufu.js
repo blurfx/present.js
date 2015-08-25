@@ -148,33 +148,35 @@ function fufufu(options) {
     if(nextSlide.getAttribute('data-index') > qs('.slide.current').getAttribute('data-index')){
       for(i=0;i<qa('.slide.current [data-fragindex][data-fragvisible="n"]').length;i++) frag[i] = qa('.slide.current [data-fragindex][data-fragvisible="n"]')[i];
       for(i=0;i<frag.length-1;i++){
-      	if(frag[i].getAttribute('data-fragindex') > frag[i+1].getAttribute('data-fragindex')){
-      		var dummy = frag[i];
-      		frag[i] = frag[i+1];
-      		frag[i+1] = dummy;
-      		i=-1;
-      	}
+        if(frag[i].getAttribute('data-fragindex') > frag[i+1].getAttribute('data-fragindex')){
+          var dummy = frag[i];
+          frag[i] = frag[i+1];
+          frag[i+1] = dummy;
+          i=-1;
+        }
       }
 
       if(frag.length){
-        singleCss(frag[0],{'opacity':1});
-        frag[0].setAttribute('data-fragvisible','y');
+        var nextFrag = qa('.slide.current [data-fragindex="'+frag[0].getAttribute('data-fragindex')+'"][data-fragvisible="n"]');
+        css(nextFrag,{'opacity':1});
+        for(i=0;i<nextFrag.length;i++)nextFrag[i].setAttribute('data-fragvisible','y');
         return;
       }
     }else {
       for(i=0;i<qa('.slide.current [data-fragindex][data-fragvisible="y"]').length;i++) frag[i] = qa('.slide.current [data-fragindex][data-fragvisible="y"]')[i];
       for(i=0;i<frag.length-1;i++){
-      	if(frag[i].getAttribute('data-fragindex') > frag[i+1].getAttribute('data-fragindex')){
-      		var dummy = frag[i];
-      		frag[i] = frag[i+1];
-      		frag[i+1] = dummy;
-      		i=-1;
-      	}
+        if(frag[i].getAttribute('data-fragindex') > frag[i+1].getAttribute('data-fragindex')){
+          var dummy = frag[i];
+          frag[i] = frag[i+1];
+          frag[i+1] = dummy;
+          i=-1;
+        }
       }
 
       if(frag.length){
-        singleCss(frag[frag.length-1],{'opacity':0});
-        frag[frag.length-1].setAttribute('data-fragvisible','n');
+        var prevFrag = qa('.slide.current [data-fragindex="'+frag[frag.length-1].getAttribute('data-fragindex')+'"][data-fragvisible="y"]');
+        css(prevFrag,{'opacity':0});
+        for(i=0;i<prevFrag.length;i++)prevFrag[i].setAttribute('data-fragvisible','n');
         return;
       }
     }
