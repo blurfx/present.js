@@ -37,20 +37,20 @@ ol {
     z-index: 10;
 }
 
-.fufufu-title, .fufufu-subtitle {
+.present-title, .present-subtitle {
 	display: block;
 }
 
-.fufufu-title {
+.present-title {
 	font-size: 4rem;
 }
 
-.fufufu-subtitle {
+.present-subtitle {
 	font-size: 3rem;
 	margin-top: 1rem;
 }
 
-.fufufu-content {
+.present-content {
 	font-size: 2.5rem;
 	margin-top: 60px;
 }
