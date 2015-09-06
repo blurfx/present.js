@@ -1,6 +1,6 @@
-# fufufu.js - ふふふ
+# present.js
 
-fufufu.js is lightweight presentation library.
+present.js is lightweight web presentation library.
 
 ##Features
 - Lightweight
@@ -20,7 +20,7 @@ fufufu.js is lightweight presentation library.
 
 Download minified js file to your project and link it.
 ```html
-<script type="text/javascript" src="fufufu.min.js"></script>
+<script type="text/javascript" src="present.min.js"></script>
 ```
 
 ##Usage
@@ -31,11 +31,11 @@ First, make some div elements that has slide class. div.slide elements will be o
 and..
 
 ```javascript
-fufufu();
+present();
 ```
 or
 ```javascript
-fufufu({
+present({
   animate: true,
   showProgress: true,
   showPageNumber: true,
@@ -83,4 +83,4 @@ like this
 
 ##Demo
 
-http://mystika.me/fufufu.js/
+http://mystika.me/present.js/

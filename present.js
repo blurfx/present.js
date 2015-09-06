@@ -86,7 +86,7 @@ function extend(){
     return arguments[0];
 }
 
-function fufufu(options) {
+function present(options) {
   window.onload = function() {
   var index = 0;
 
