@@ -2,6 +2,8 @@
 
 present.js is lightweight web presentation library.
 
+**_this is old version of onepagescroll. if you find the latest version, go here : [onepagescroll](https://github.com/Mystika/onepagescroll)_**
+
 ##Features
 - Lightweight
 - Highly customizable
